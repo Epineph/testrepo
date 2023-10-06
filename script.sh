@@ -48,9 +48,9 @@ apk add doas
 echo "permit persist :wheel" | sudo tee -a /etc/doas.d/doas.conf
 
 apk add sudo
-#NEWUSER='yourUserName'
-#adduser -g "${NEWUSER}" $NEWUSER
-#echo "$NEWUSER ALL=(ALL) ALL" > /etc/sudoers.d/$NEWUSER && chmod 0440 /etc/sudoers.d/$NEWUSER
+NEWUSER='philip'
+adduser -g "${NEWUSER}" $NEWUSER
+echo "$NEWUSER ALL=(ALL) ALL" > /etc/sudoers.d/$NEWUSER && chmod 0440 /etc/sudoers.d/$NEWUSER
 
 
 
@@ -72,8 +72,11 @@ sudo sh install.sh
 
 apk add zsh zsh-theme-powerlevel10k
 
-apk add zsh zsh-theme-powerlevel10k
+apk add tar
 
+wget https://www.zsh.org/pub/zsh-5.9.tar.xz
+
+tar -xvf zsh-5.9
 
 ln -s /usr/share/zsh/plugins/powerlevel10k ~/.local/share/zsh/plugins/
 
