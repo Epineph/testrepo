@@ -39,13 +39,6 @@ cat /etc/bash/bash_completion.sh
 echo "geri brukari philip"
 echo "um tad ikki riggar, so stendur ein alternativur mati i scriptinum"
 
-adduser -g "philip" philip
-
-adduser philip wheel
-
-apk add doas
-
-echo "permit persist :wheel" | sudo tee -a /etc/doas.d/doas.conf
 
 apk add sudo
 NEWUSER='philip'
